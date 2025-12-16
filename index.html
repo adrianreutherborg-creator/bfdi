@@ -2,51 +2,117 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adrians Battle for Dream Island – Fansida</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
+      font-family: 'Arial', sans-serif;
+      background-color: #e0f7fa; /* ljusblå bakgrund */
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #4CAF50;
+      background-color: #00bfa5; /* teal header */
       color: white;
-      padding: 20px;
+      padding: 25px 20px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+    }
+
     nav {
-      background-color: #333;
-      padding: 10px;
+      background-color: #00796b; /* mörkare teal */
+      padding: 12px;
       text-align: center;
     }
+
     nav a {
       color: white;
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: #004d40;
     }
+
     main {
       padding: 20px;
+      padding-bottom: 80px; /* utrymme för footer */
+      max-width: 900px;
+      margin: auto;
     }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #00796b;
+    }
+
+    .character-list span {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 12px;
+      background-color: #00bfa5;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .character-list span:hover {
+      transform: scale(1.1);
+      background-color: #004d40;
+    }
+
     footer {
-      background-color: #ddd;
+      background-color: #b2dfdb;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       position: fixed;
       bottom: 0;
       width: 100%;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     }
-    .card {
-      background-color: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 6px 0;
+      }
+
+      main {
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -54,27 +120,40 @@
 
 <header>
   <h1>Battle for Dream Island</h1>
-  <p>En fansida gjord av en Adrian Reutherborg 🌟</p>
+  <p>En fansida gjord av Adrian Reutherborg 🌟</p>
 </header>
 
 <nav>
-  <a href="#">Hem</a>
-  <a href="#">Karaktärer</a>
-  <a href="#">Avsnitt</a>
-  <a href="#">Om</a>
+  <a href="#">🏠 Hem</a>
+  <a href="#">👥 Karaktärer</a>
+  <a href="#">🎬 Avsnitt</a>
+  <a href="#">ℹ️ Om</a>
 </nav>
 
 <main>
-  <div class="card">
+  <section class="card">
     <h2>Välkommen!</h2>
-    <p>Det här är min första hemsida och den handlar om Battle for Dream Island.</p>
-    <p>Battle for Dream Island (BFDI) är en animerad serie skapad av jacknjellify.</p>
-  </div>
+    <p>Det här är min första fansida och den handlar om <strong>Battle for Dream Island (BFDI)</strong>.</p>
+    <p>BFDI är en populär animerad serie skapad av <strong>jacknjellify</strong>, fylld med roliga karaktärer och spännande utmaningar! 🎉</p>
+  </section>
 
-  <div class="card">
-    <h2>Favoritkaraktär</h2>
-    <p>Skriv här om din favoritkaraktär, till exempel Firey, Leafy eller Coiny!</p>
-  </div>
+  <section class="card">
+    <h2>Favoritkaraktärer</h2>
+    <p>Klicka på en karaktär för att markera din favorit:</p>
+    <div class="character-list">
+      <span>🔥 Firey</span>
+      <span>🍃 Leafy</span>
+      <span>💰 Coiny</span>
+      <span>💎 Rocky</span>
+      <span>🛢️ Spongy</span>
+      <span>💡 Bubble</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Om serien</h2>
+    <p>Serien handlar om objekt som tävlar mot varandra i olika utmaningar för att vinna "Dream Island". Varje karaktär har sin egen personlighet, vilket gör serien både rolig och spännande att följa! 🌟</p>
+  </section>
 </main>
 
 <footer>
@@ -83,5 +162,3 @@
 
 </body>
 </html>
-
-
